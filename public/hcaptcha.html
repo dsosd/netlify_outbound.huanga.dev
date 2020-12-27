@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>hCaptcha</title>
+	<script src="https://hcaptcha.com/1/api.js" integrity="sha384-Lb6IM8Cd6dHCJnCYWfB3kQMQvEQLgGZbz926KCFiD6XJx5F4c+Jmb4JOvJ28Rg8G" defer></script>
+</head>
+<body>
+	<form action="https://api.dsosd.org/captcha/h" method="POST">
+		<input id="session-key" type="text" name="session" style="display:none;" />
+		<div class="h-captcha" data-sitekey="0f2028c8-107e-4833-942a-b7f0a69fca0d"></div>
+		<br />
+		<input type="submit" value="Submit" />
+	</form>
+	<script>
+	document.getElementById("session-key").value = new URLSearchParams(window.location.search).get("s");
+	</script>
+</body>
+</html>
